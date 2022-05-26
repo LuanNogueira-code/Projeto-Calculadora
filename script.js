@@ -22,11 +22,18 @@ res.innerHTML = '0'
 
 function num0() {
     
-    if(res.innerHTML = '0' && valor1 == '') {
-        res.innerHTML = '0'
-        } else {
-        valor1 += '0'
-        res.innerHTML = valor1
+    if(res.innerHTML == '0' && valor1 == '') {
+            res.innerHTML = '0'
+        }/*else if (valor1 == '') {
+            valor1 += '1'
+            res.innerHTML = valor1
+        }*/
+        else if (valor1 !== '') {
+            valor1 += '0'
+            res.innerHTML = valor1
+        } else if (calculo > 0) {
+            valor2 += '0'
+            res.innerHTML = valor2
         }
 }
 
@@ -34,7 +41,11 @@ function num1() {
     if(res.innerHTML == '0' && valor1 == '') {
         valor1 = '1'
         res.innerHTML = valor1
-    } else if (valor1 !== '') {
+    }/* else if (valor1 == '') {
+        valor1 += '1'
+        res.innerHTML = valor1
+    }*/
+    else if (valor1 !== '') {
         valor1 += '1'
         res.innerHTML = valor1
     } else if (calculo > 0) {
@@ -45,11 +56,20 @@ function num1() {
 }
 
 function num2() {
-    valor1 += '2'
-    if(res.innerHTML == '0') {
+    if(res.innerHTML == '0' && valor1 == '') {
+        valor1 = '2'
         res.innerHTML = valor1
+    }/* else if (valor1 == '') {
+        valor1 += '1'
+        res.innerHTML = valor1
+    }*/
+        else if (valor1 !== '') {
+        valor1 += '2'
+        res.innerHTML = valor1
+    } else if (calculo > 0) {
+        valor2 += '2'
+        res.innerHTML = valor2
     }
-    res.innerHTML = valor1
 }
 
 function resultado() {
@@ -58,13 +78,17 @@ function resultado() {
 
 function soma() {
     calc.innerHTML = valor1 + "+"
+    res.innerHTML = 0
     if (calculo == 0) {
         calculo = Number(valor1)
         valor1 = ''
     } else {
-        var soma = Number(calculo) + Number(valor2)
-        calc.innerHTML = calculo + " + " + valor2 + "="
+        //let n2 = Number(valor2)
+        var soma = calculo + Number(valor2)
+        calc.innerHTML = `${calculo} + ${valor2} =`
         res.innerHTML = soma
+        //calculo = 0
+        //valor2 = ''
     }
     
 }
