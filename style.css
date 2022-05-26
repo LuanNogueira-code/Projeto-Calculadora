@@ -1,0 +1,49 @@
+@charset "UTF 8";
+
+body {
+    background-color: #74ae96;
+}
+
+h1 {
+    color: #003a23;
+    font: normal normal 32px Verdana;
+    text-align: center;
+    
+}
+section {
+    background-color: #489173;
+    margin: auto;
+    height: 350px;
+    width: 500px;
+
+}
+
+.numbut {
+    width: 100px;
+    height: 70px;
+    margin: 3px 1px 5px 3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+.operadores {
+    width: 100px;
+    height: 70px;
+    margin: 3px 1px 5px 3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background-color: #718da5;
+}
+
+.numbut:hover {
+    background-color: rgba(173, 255, 173, 0.425);
+}
+
+.operadores:hover {
+    background-color: rgba(173, 255, 173, 0.425);
+}
+
+footer {
+    text-align: center;
+    color: #003a23;
+}
